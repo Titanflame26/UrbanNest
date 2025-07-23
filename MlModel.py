@@ -13,3 +13,9 @@ df.head(10)
 # Filter rows with any null values
 rows_with_nulls = df[df.isnull().any(axis=1)]
 print(rows_with_nulls)
+
+df.tail(10)
+
+df_cleaned = df.dropna(how='all')
+
+df_cleaned.tail()
