@@ -19,3 +19,10 @@ df.tail(10)
 df_cleaned = df.dropna(how='all')
 
 df_cleaned.tail()
+
+#building model
+
+km=KMeans(n_clusters=3)
+x=df_cleaned[['Commercial Shops','Education Institutions','Hospital','Bus','Recreation','Food','Pharmacies','Salon']]
+y=df_cleaned[['ATM','Small shops','Mart','Air Quality index','Theater','1BHK rent','2BHK Rent','3 BHK Rent']]
+y_predicted=km.fit_predict(x,y)
