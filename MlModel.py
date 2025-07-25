@@ -30,3 +30,31 @@ y=df_cleaned[['ATM','Small shops','Mart','Air Quality index','Theater','1BHK ren
 y_predicted=km.fit_predict(x,y)
 
 df_cleaned['cluster']=y_predicted
+df1=df_cleaned[df_cleaned.cluster==0]
+df2=df_cleaned[df_cleaned.cluster==1]
+df3=df_cleaned[df_cleaned.cluster==2]
+df2
+
+
+#applying PCA for visualization
+
+from sklearn.decomposition import PCA
+import matplotlib.pyplot as plt
+
+# Perform PCA to reduce the data to 2 dimensions
+pca = PCA(n_components=8)
+x_pca = pca.fit_transform(x)
+x_pca.shape
+
+# Scatter plot of the clusters
+plt.figure(figsize=(10, 6))
+plt.scatter(x_pca[df_cleaned['cluster'] == 0, 0], x_pca[df_cleaned['cluster'] == 0, 1], label='Cluster 0', alpha=0.6)
+plt.scatter(x_pca[df_cleaned['cluster'] == 1, 0], x_pca[df_cleaned['cluster'] == 1, 1], label='Cluster 1', alpha=0.6)
+plt.scatter(x_pca[df_cleaned['cluster'] == 2, 0], x_pca[df_cleaned['cluster'] == 2, 1], label='Cluster 2', alpha=0.6)
+
+# Adding labels and title
+plt.xlabel('Principal Component 1')
+plt.ylabel('Principal Component 2')
+plt.title('2D Visualization of Clusters using PCA')
+plt.legend()
+plt.show()#
