@@ -58,3 +58,11 @@ plt.ylabel('Principal Component 2')
 plt.title('2D Visualization of Clusters using PCA')
 plt.legend()
 plt.show()#
+
+#metrics to  analyse accuracy
+
+from sklearn.metrics import silhouette_score
+
+# Calculate the silhouette score
+sil_score = silhouette_score(x_pca, km.labels_)
+print("Silhouette Score:", sil_score)
