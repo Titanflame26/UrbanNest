@@ -24,3 +24,19 @@ df['1BHK rent'] = pd.to_numeric(df['1BHK rent'], errors='coerce')
 mn = math.floor(df['1BHK rent'].mean())
 print(mn)
 df['1BHK rent'] = df['1BHK rent'].fillna(mn)
+
+
+df['2BHK Rent'] = df['2BHK Rent'].astype(str).str.replace(',', '')
+
+# Convert the column to numeric, invalid parsing will be set to NaN (use 'coerce' to handle errors)
+df['2BHK Rent'] = pd.to_numeric(df['2BHK Rent'], errors='coerce')
+mn1 = math.floor(df['2BHK Rent'].mean())
+df['2BHK Rent'] = df['2BHK Rent'].fillna(mn1)
+
+
+df['3 BHK Rent'] = df['3 BHK Rent'].astype(str).str.replace(',', '')
+
+# Convert the column to numeric,(use 'coerce' to handle errors)
+df['3 BHK Rent'] = pd.to_numeric(df['3 BHK Rent'], errors='coerce')
+mn2 = math.floor(df['3 BHK Rent'].mean())
+df['3 BHK Rent'] = df['3 BHK Rent'].fillna(mn2)
