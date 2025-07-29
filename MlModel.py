@@ -40,3 +40,12 @@ df['3 BHK Rent'] = df['3 BHK Rent'].astype(str).str.replace(',', '')
 df['3 BHK Rent'] = pd.to_numeric(df['3 BHK Rent'], errors='coerce')
 mn2 = math.floor(df['3 BHK Rent'].mean())
 df['3 BHK Rent'] = df['3 BHK Rent'].fillna(mn2)
+
+df.head(20)
+
+# Remove commas and convert to numeric (forcing errors to NaN)
+df['Population'] = df['Population'].astype(str).str.replace(',', '').astype(float)
+
+# Now calculate the mean or perform any other operation
+
+ 
