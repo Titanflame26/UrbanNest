@@ -49,3 +49,10 @@ df['Population'] = df['Population'].astype(str).str.replace(',', '').astype(floa
 # Now calculate the mean or perform any other operation
 
  
+from sklearn.preprocessing import StandardScaler
+scalar=StandardScaler()
+kmmodel=KMeans(n_clusters=3)
+x=df[['Population','Commercial Shops','Education Institutions','Hospital','Bus','Recreation','Food','Pharmacies','Salon','ATM','Small shops','Mart','Air Quality index','Theater','1BHK rent','2BHK Rent','3 BHK Rent']]
+#x_scaled=scalar.fit_transform(x)
+y_predicted=kmmodel.fit_predict(x)
+df['cluster']=y_predicted
