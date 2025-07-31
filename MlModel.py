@@ -56,3 +56,9 @@ x=df[['Population','Commercial Shops','Education Institutions','Hospital','Bus',
 #x_scaled=scalar.fit_transform(x)
 y_predicted=kmmodel.fit_predict(x)
 df['cluster']=y_predicted
+
+y_predicted
+
+df.head(20)
+
+
