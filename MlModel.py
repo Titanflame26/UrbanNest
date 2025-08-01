@@ -62,3 +62,35 @@ y_predicted
 df.head(20)
 
 
+import matplotlib.pyplot as plt
+from sklearn.decomposition import PCA
+from sklearn.preprocessing import StandardScaler
+from sklearn.cluster import KMeans
+
+# Assuming x is defined and contains your data
+
+# Apply PCA to reduce the dimensions to 2D
+pca = PCA(0.95)
+x_pca = pca.fit_transform(x)
+
+# Fit the KMeans model
+kmmodel = KMeans(n_clusters=3)
+kmmodel.fit(x_pca)
+
+# Get the cluster labels for each data point
+labels = kmmodel.labels_
+
+# Compute centroids of the clusters
+centroids = kmmodel.cluster_centers_
+
+# Plot the data points and color them by their cluster labels
+plt.figure(figsize=(10, 6))
+plt.scatter(x_pca[:, 0], x_pca[:, 1], c=labels, cmap='viridis', alpha=0.6)
+plt.scatter(centroids[:, 0], centroids[:, 1], c='red', marker='*', s=200, label='Centroids')
+
+plt.title("KMeans Clusters (PCA 2D projection)")
+plt.xlabel("PCA Component 1")
+plt.ylabel("PCA Component 2")
+plt.legend()
+plt.colorbar(label="Cluster")
+plt.show()
