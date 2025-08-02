@@ -94,3 +94,14 @@ plt.ylabel("PCA Component 2")
 plt.legend()
 plt.colorbar(label="Cluster")
 plt.show()
+
+labels = kmmodel.labels_
+labels
+
+k_range=range(1,10)
+sse=[]
+for k in k_range:
+    km1=KMeans(n_clusters=k)
+    km1.fit(x)
+    sse.append(km1.inertia_)
+sse
