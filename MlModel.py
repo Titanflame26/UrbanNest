@@ -105,3 +105,5 @@ for k in k_range:
     km1.fit(x)
     sse.append(km1.inertia_)
 sse
+
+plt.plot(k_range,sse)
