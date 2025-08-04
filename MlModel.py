@@ -107,3 +107,9 @@ for k in k_range:
 sse
 
 plt.plot(k_range,sse)
+
+from sklearn.metrics import silhouette_score
+
+# Compute silhouette score
+score = silhouette_score(x, kmmodel.labels_)
+print("Silhouette Score:", score)
