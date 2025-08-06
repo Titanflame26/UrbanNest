@@ -113,3 +113,6 @@ from sklearn.metrics import silhouette_score
 # Compute silhouette score
 score = silhouette_score(x, kmmodel.labels_)
 print("Silhouette Score:", score)
+
+print(kmmodel.n_clusters)
+
