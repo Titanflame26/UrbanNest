@@ -116,3 +116,259 @@ print("Silhouette Score:", score)
 
 print(kmmodel.n_clusters)
 
+print("""Choose a Sub-area from the given list:-
+      Ideal Homes
+Kenchenhalli
+BEML Layout
+Sri Krishna Garden Layout
+Pattanagere
+Gattigere
+Channasandra
+Aditya Layout
+Jaware Gowda Nagara
+Dubasipalya
+Malyasandra
+Vinayaka Layout
+Kengeri Upanagara
+Kodipalya
+Dwaraka Nagar
+Avalahalli
+Byatarayanapura
+Srinagar
+Srinivas Nagar
+Vidyapeeta Layout
+Kathreguppe
+Karesandra
+Yarabnagar
+Kadarenahalli
+Banagirinagara
+Ittamadu
+Ganapathi Nagar
+Chickpet
+Nagarthpet
+Avenue Road
+Chamrajpete
+Mamoolpet
+Balepet
+Kalassipalya
+Tharagupet
+Kodigehalli
+Sonnenahalli
+Kurudusonnenahalli
+Basavanapura
+Seegehalli
+Kumbena Agrahara
+Sadaramangala
+Belathur
+Duravani Nagar
+ITI Colony
+VB Layout
+Bhattarahalli
+Dominic Layout
+Bharathi Nagar
+Domsandra
+Chaithanya Ananya
+Govindaraja Nagar
+Mudalapalya
+Amarajyoti Nagar
+Cauvery Nagar
+Pattegarhpalya
+Prashant Nagar
+MC Layout
+Marenahalli
+RPC Layout
+Bull Temple Road
+Gandhi Bazar
+BNC Area
+Chamarajpet
+Hanumantha Nagar
+Thyagaraja Nagar
+Chikkalsandra
+Gowdanpalya
+RK Layout
+Ramanjeyanagar
+Koramangala 1st Block
+Koramangala 2nd Block
+Koramangala 3rd Block
+Koramangala 4th Block
+Koramangala 5th Block
+Koramangala 6th Block
+Koramangala 7th Block
+Koramangala 8th Block
+Jayanagar 1st Block
+Jayanagar 2nd Block
+Jayanagar 3rd Block
+Jayanagar 4th Block
+Jayanagar 4th 'T' Block
+Jayanagar 5th Block
+Jayanagar 6th Block
+Jayanagar 7th Block
+Jayanagar 8th Block
+Jayanagar 9th Block
+JP Nagar 1st Phase
+JP Nagar 2nd Phase
+JP Nagar 3rd Phase
+JP Nagar 4th Phase
+JP Nagar 5th Phase
+JP Nagar 6th Phase
+JP Nagar 7th Phase
+JP Nagar 8th Phase
+JP Nagar 9th Phase
+BDA Layout
+ITI Layout
+Agara Village
+Sector 2
+Sector 3
+Sector 4
+Sector 5
+Sector 6
+Sector 7
+Rajiv Gandhi Nagar
+Basaweshwaranagar
+Gayatri Nagar
+ISKCON
+West Of Chord Road
+Agrahara Dasarahalli
+Manjunath Nagar
+Annapoorneshwari Nagara
+ITI Layout
+MPM Layout
+NGEF Layout
+Papareddy Palya
+Kalyana Nagar
+Nagarabhavi Village
+Canara Bank Colony
+Bhairaveshwara Nagar
+Moodala Palya
+Neotown
+Shikaripalya
+Siraj Layout
+Neeladri Nagar
+Celebrity Classic Layout
+Konappana Agrahara
+Doddanagamangala
+Bhovi Palya
+Shanthi Pura
+Ananth Nagar
+Kammasandra
+Andapura
+RS Gardens
+Bommasandra Industrial Layout
+Thirupalya
+Maragondanahalli
+Veersandra
+Appareddy Palya
+Eshwara Layout
+Laksmipura
+Hoysala Nagar
+Defence Colony
+HAL 2nd Stage
+Narasimha Layout
+Rajaindustrial Layout
+Goraguntepalya
+Muniswara Nagar
+Pampanagar
+Kamlanehru Extension
+Vinayaka Extension
+Pramod Layout
+ITI Layout 3rd Phase
+Swami Shivanandapuram
+New Bamboo Bazaar
+Sulthangunta
+Shivajinagar
+Immadihalli
+Siddapura
+Nallurhalli
+Pattandur Agrahara
+Thubarahalli
+Ramagondanahalli
+Aditya Nagar
+Vinatak Nagara
+BEL Layout (BEL)
+HMT Layout (HMT)
+NTI Layout (NTI)
+AMS Layout
+Narsipura
+Vaishnavi Layout
+GD Layout
+Nanjappa Layout
+Durga Parmeshwari Layout
+Yelahanka New Town 4th Phase
+Yelahanka New Town 5th Phase
+Akshaya Nagara
+Attur Layout
+MP Layout
+Santhosh Nagar
+RWF West Colony
+Badrappa Layout
+Udaya Layout
+Chikka Bommasandra
+Sector A
+Ambedkar Colony
+LBS Nagar
+Somanagar
+Anjana Nagar
+Madeshwara Layout
+Venkateshwara Layout
+Vishwaneedam
+Venkateshwara Nagar
+Ganjana Nagar
+Sriganda Nagar
+Srinivasa Nagar
+Kareemsab Nagar
+Anekal Town
+Begur
+Harlur
+Kodathi
+Haldenahalli
+Chandapura
+Yarandahalli
+RK Twp
+Hennagara
+Suryanagar
+Thirumagondanahalli
+Muthanallur
+Chintalamadivala Village
+Singena Agrahara
+Thirupalya
+Chinnapa Layout
+Sriram Layout
+Devasthanagalu
+KBM Layout
+Anandnagar
+SBM Colony
+Chola Nagar
+Ayyappa Layout
+Guddadahalli
+R.T. Nagar
+Subramani Nagar
+Doddanekundi
+Karthik Nagar
+Sanjay Nagar
+Aswath Nagar
+CKB Layout
+Belandur
+Manjunatha Layout
+Marthahalli Village
+HAL Central Township
+Sector 3
+Jawahar Nagar
+Adarsh Nagar
+Veeraih Nagar
+Subramani Apartment
+Ullal Upanagara
+Sir M Vishweshwaraiah Layout 6th Block
+Aditya Nagar
+JP Nagar 7th Phase
+RBI Layout
+Suncity Layout
+Nrupathunga Nagar
+MS Ramaiah City Layout
+Aradhana Layout
+Jumbo Sawari Dinne
+Royal County
+Kembathalli
+Koth0or Dinne
+Akshya Garden
+Infosys Headquarters
+""")
