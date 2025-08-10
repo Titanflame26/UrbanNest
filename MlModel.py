@@ -374,3 +374,50 @@ Infosys Headquarters
 """)
 from sklearn.cluster import KMeans
 import pandas as pd
+# Define the prediction function
+def predict_cluster(area_name):
+    # Check if area name exists
+    if area_name not in df['Sub areas'].values:
+        return f"Area '{area_name}' is not suitable for living as it does not have enough amenities like commercial shops, transportation, and hospitals."
+    
+    # Retrieve features for the given area
+    area_features = df[df['Sub areas'] == area_name].drop(columns=['Sub areas', 'cluster'])
+    
+    # Select only numeric data
+    area_features = area_features.select_dtypes(include=['number'])
+    
+    # Ensure consistent data preprocessing
+    global x  # Define or preprocess x globally if used elsewhere
+    x = df.drop(columns=['Sub areas', 'cluster']).select_dtypes(include=['number'])
+    area_features = area_features.fillna(area_features.mean())
+    x = x.fillna(x.mean())
+    
+    # Initialize KMeans with a fixed random state
+    kmmodel = KMeans(n_clusters=3, random_state=250)
+    kmmodel.fit(x)
+    
+    # Predict cluster
+    cluster = kmmodel.predict(area_features)
+    return cluster[0]  # Extract the integer cluster label
+
+# User input
+subarea_name = input("Enter a subarea name from the given list: ")
+output = predict_cluster(subarea_name)
+
+# Handle case where area is not found
+if isinstance(output, str):
+    print(output)  # Print the message if it's a string
+else:
+    print(f"Predicted Cluster: {output}")
+    if output == 0:
+        print("""Overview: Neighborhoods with a moderate population and balanced amenities, making them appealing for middle-income families.
+          Focus: Increase amenities (commercial shops, recreation, transport).
+          Recommendation: Develop bus connectivity and recreational spaces to make the areas better suitable for living.""")
+    elif output == 1:
+        print("""Overview: Low population, few commercial shops → highlights affordable areas with fewer amenities, suitable for budget-conscious residents.
+              Focus: Maintain balance between these sub-areas involves optimizing population density, ensuring a diverse mix of amenities, and promoting affordability, accessibility.
+              Recommendation: Encourage sustainable development with emphasis on air quality and green spaces.""")
+    elif output == 2:
+        print("""Overview: Corresponds to densely populated, well-developed areas with abundant amenities but higher rents, ideal for those seeking convenience.
+              Focus: High-density urban areas.
+              Recommendation: Air quality can be improved by planting trees and reducing carbon emissions.""")
